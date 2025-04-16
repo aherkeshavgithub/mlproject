@@ -48,13 +48,13 @@ class CustomData:
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict={
-                "gender":[self.gender],
-                "race_ethnicity":[self.race_ethnicity],
-                "parental_level_of_education":[self.parental_level_of_education],
-                "lunch":[self.lunch],
-                "test_preparation_course":[self.test_preparation_course],
-                "writing_score":[self.writing_score],
-                "reading_score": [self.reading_score],
+                "gender":self.gender,
+                "race_ethnicity":self.race_ethnicity,
+                "parental_level_of_education":self.parental_level_of_education,
+                "lunch":self.lunch,
+                "test_preparation_course":self.test_preparation_course,
+                "writing_score":self.writing_score,
+                "reading_score": self.reading_score,
             }
             logging.info(f"{custom_data_input_dict}Reached>>>>>>>>>>>> In CUSTOMDATA class.... IN get_data_as_dataframe function..........")
             return pd.DataFrame(custom_data_input_dict)
